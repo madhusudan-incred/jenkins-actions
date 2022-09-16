@@ -2,13 +2,13 @@ name: 'Trigger Jenkins Multiple Jobs'
 description: 'Triggering Jenkins Job through the API'
 author: 'Bo-Yi Wu'
 inputs:
-  url: http://jenkins-qa.internal-nprod.incred.com
+  url: ${{ secrets.JENKINS_SERVER }}
     description: 'jenkins base url'
-  user: raghu
+  user: ${{ secrets.JENKINS_USERNAME }}
     description: 'jenkins username'
-  token: 11acccba7fdb2d235539c0739e0aade4a8
+  token: ${{ secrets.JENKINS_PAT }}
     description: 'jenkins api token'
-  job: RepaymentMicroservices
+  job: ${{ secrets.JENKINS_JOB }}
     description: 'jenkins job'
 runs: 
   using: 'docker'
