@@ -2,7 +2,7 @@ name: 'Trigger Jenkins Multiple Jobs'
 description: 'Triggering Jenkins Job through the API'
 author: 'Bo-Yi Wu'
 inputs:
-  url: ${{ secrets.JENKINS_SERVER }}
+  url: http://jenkins-qa.internal-nprod.incred.com
     description: 'jenkins base url'
   user: ${{ secrets.JENKINS_USERNAME }}
     description: 'jenkins username'
